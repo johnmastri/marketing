@@ -19,11 +19,11 @@ export default {
 				destructive: { DEFAULT: 'hsl(var(--destructive))', foreground: 'hsl(var(--destructive-foreground))' }
 			},
 			borderRadius: {
-				'2xl': 'calc(var(--radius) + 8px)',
-				xl: 'calc(var(--radius) + 4px)',
+				'2xl': 'var(--radius-2xl)',
+				xl: 'var(--radius-xl)',
 				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				md: 'var(--radius-md)',
+				sm: 'var(--radius-sm)'
 			}
 		}
 	},

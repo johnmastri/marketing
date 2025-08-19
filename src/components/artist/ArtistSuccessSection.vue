@@ -44,83 +44,99 @@
 
 					<div class="grid grid-cols-2 gap-6">
 						<div class="bg-background rounded-xl p-6 border">
-							<div class="flex items-center space-x-3 mb-3">
+							<div class="flex items-center space-x-3 mb-4">
 								<div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center">
 									<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 									</svg>
 								</div>
 								<div>
-									<div class="text-2xl font-bold text-blue-600">10K</div>
-									<div class="text-sm text-muted-foreground">Followers</div>
+									<div class="text-sm text-muted-foreground">Posts/month</div>
 								</div>
 							</div>
-							<div class="flex items-center text-sm">
-								<svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l9.2-9.2M17 8v9H8" />
-								</svg>
-								<span class="text-green-600 font-medium">+4900% growth</span>
+							<div class="grid grid-cols-2 gap-3 mb-2">
+								<div class="rounded-lg border p-3">
+									<div class="text-xs text-muted-foreground">Before</div>
+									<div class="text-xl font-semibold">3</div>
+								</div>
+								<div class="rounded-lg border p-3 bg-green-500/5">
+									<div class="text-xs text-muted-foreground">After</div>
+									<div class="text-xl font-semibold text-green-600">30</div>
+								</div>
 							</div>
+							<p class="text-sm text-muted-foreground">Stayed consistent for the first time ever.</p>
 						</div>
 
 						<div class="bg-background rounded-xl p-6 border">
-							<div class="flex items-center space-x-3 mb-3">
+							<div class="flex items-center space-x-3 mb-4">
 								<div class="w-10 h-10 bg-purple-500/10 rounded-full flex items-center justify-center">
 									<svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h6m-6 4h10" />
 									</svg>
 								</div>
 								<div>
-									<div class="text-2xl font-bold text-purple-600">8.2%</div>
-									<div class="text-sm text-muted-foreground">Engagement</div>
+									<div class="text-sm text-muted-foreground">Comment engagement</div>
 								</div>
 							</div>
-							<div class="flex items-center text-sm">
-								<svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l9.2-9.2M17 8v9H8" />
-								</svg>
-								<span class="text-green-600 font-medium">+340% increase</span>
+							<div class="grid grid-cols-2 gap-3 mb-2">
+								<div class="rounded-lg border p-3">
+									<div class="text-xs text-muted-foreground">Before</div>
+									<div class="text-xl font-semibold">10%</div>
+								</div>
+								<div class="rounded-lg border p-3 bg-green-500/5">
+									<div class="text-xs text-muted-foreground">After</div>
+									<div class="text-xl font-semibold text-purple-600">50%</div>
+								</div>
 							</div>
+							<p class="text-sm text-muted-foreground">Fans stopped scrolling and started talking.</p>
 						</div>
 
 						<div class="bg-background rounded-xl p-6 border">
-							<div class="flex items-center space-x-3 mb-3">
+							<div class="flex items-center space-x-3 mb-4">
 								<div class="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
 									<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h12M3 17h8" />
 									</svg>
 								</div>
 								<div>
-									<div class="text-2xl font-bold text-green-600">2.1M</div>
-									<div class="text-sm text-muted-foreground">Streams</div>
+									<div class="text-sm text-muted-foreground">Time saved</div>
 								</div>
 							</div>
-							<div class="flex items-center text-sm">
-								<svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l9.2-9.2M17 8v9H8" />
-								</svg>
-								<span class="text-green-600 font-medium">+680% increase</span>
+							<div class="grid grid-cols-2 gap-3 mb-2">
+								<div class="rounded-lg border p-3">
+									<div class="text-xs text-muted-foreground">Before</div>
+									<div class="text-sm font-medium">Manual editing + scheduling</div>
+								</div>
+								<div class="rounded-lg border p-3 bg-green-500/5">
+									<div class="text-xs text-muted-foreground">After</div>
+									<div class="text-xl font-semibold text-green-600">10+ hrs/week saved</div>
+								</div>
 							</div>
+							<p class="text-sm text-muted-foreground">No more editing apps or scheduling headaches.</p>
 						</div>
 
 						<div class="bg-background rounded-xl p-6 border">
-							<div class="flex items-center space-x-3 mb-3">
+							<div class="flex items-center space-x-3 mb-4">
 								<div class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center">
 									<svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16h16M8 8h8M8 12h8M8 16h8" />
 									</svg>
 								</div>
 								<div>
-									<div class="text-2xl font-bold text-orange-600">$3.2K</div>
-									<div class="text-sm text-muted-foreground">Monthly Revenue</div>
+									<div class="text-sm text-muted-foreground">Cross-platform coverage</div>
 								</div>
 							</div>
-							<div class="flex items-center text-sm">
-								<svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l9.2-9.2M17 8v9H8" />
-								</svg>
-								<span class="text-green-600 font-medium">From $0</span>
+							<div class="grid grid-cols-2 gap-3 mb-2">
+								<div class="rounded-lg border p-3">
+									<div class="text-xs text-muted-foreground">Before</div>
+									<div class="text-sm font-medium">Single-platform posting</div>
+								</div>
+								<div class="rounded-lg border p-3 bg-green-500/5">
+									<div class="text-xs text-muted-foreground">After</div>
+									<div class="text-xl font-semibold text-orange-600">100% coverage</div>
+								</div>
 							</div>
+							<p class="text-sm text-muted-foreground">Instagram, TikTok, and YouTube Shorts—handled in one flow.</p>
 						</div>
 					</div>
 
@@ -151,3 +167,4 @@ export default {
 	name: 'ArtistSuccessSection'
 }
 </script>
+

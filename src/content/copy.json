@@ -117,19 +117,24 @@
 		"description": "See how creators are scaling their content without losing their brand identity",
 		"metrics": [
 			{
-				"before": "2 posts/week",
-				"after": "14 posts/week",
-				"description": "without losing the brand look"
+				"before": "3 posts/month",
+				"after": "30 posts/month",
+				"description": "Stayed consistent for the first time ever."
 			},
 			{
-				"before": "3 hours per post",
-				"after": "20 minutes per post",
-				"description": "from concept to published"
+				"before": "10% engagement in comments",
+				"after": "50% engagement in comments",
+				"description": "Fans stopped scrolling and started talking."
 			},
 			{
-				"before": "Inconsistent engagement",
-				"after": "5x output, same identity",
-				"description": "across three personas"
+				"before": "Editing + scheduling every week",
+				"after": "Saved 10+ hours/week",
+				"description": "No more editing apps or scheduling headaches."
+			},
+			{
+				"before": "Single-platform posting",
+				"after": "100% cross-platform coverage",
+				"description": "Instagram, TikTok, and YouTube Shorts—handled in one flow."
 			}
 		]
 	},

@@ -72,6 +72,20 @@ export const useThemeStore = defineStore('theme', {
 			html.style.setProperty('--accent', this.accentHsl)
 			html.style.setProperty('--accent-foreground', this.accentFgHsl)
 			html.style.setProperty('--radius', this.radius)
+			
+			const radiusPx = parseInt(this.radius.replace('px', '')) || 0
+			if (radiusPx === 0) {
+				html.style.setProperty('--radius-2xl', '0px')
+				html.style.setProperty('--radius-xl', '0px')
+				html.style.setProperty('--radius-md', '0px')
+				html.style.setProperty('--radius-sm', '0px')
+			} else {
+				html.style.setProperty('--radius-2xl', `${radiusPx + 8}px`)
+				html.style.setProperty('--radius-xl', `${radiusPx + 4}px`)
+				html.style.setProperty('--radius-md', `${Math.max(0, radiusPx - 2)}px`)
+				html.style.setProperty('--radius-sm', `${Math.max(0, radiusPx - 4)}px`)
+			}
+			
 			localStorage.setItem('theme-preset', this.preset)
 			localStorage.setItem('theme-mode', this.mode)
 			localStorage.setItem('theme-accent', this.accentHsl)

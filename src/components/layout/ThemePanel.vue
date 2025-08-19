@@ -115,7 +115,10 @@ export default {
 			}
 			return style
 		},
-		radiusPx() { return parseInt(String(this.radiusVar).replace('px', '')) || 12 }
+		radiusPx() { 
+			const parsed = parseInt(String(this.radiusVar).replace('px', ''))
+			return isNaN(parsed) ? 12 : parsed
+		}
 	},
 	methods: {
 		...mapActions(useThemeStore, ['init', 'setPreset', 'setMode', 'setAccentHex', 'setRadiusPx', 'togglePanel', 'setPanelOpen', 'setPanelPosition']),

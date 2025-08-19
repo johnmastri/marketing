@@ -19,7 +19,7 @@
 			<TransformationSection />
 			<CoreFeaturesSection />
 			<GenreExamplesSection />
-			<ArtistSuccessSection />
+			<ArtistMetricsSection />
 			<HowItWorksSection />
 			<PlatformIntegrationsSection />
 			<PricingSection />
@@ -44,7 +44,7 @@ import NewsletterSection from '@/components/newsletter/NewsletterSection.vue'
 import ArtistHeroSection from '@/components/hero/ArtistHeroSection.vue'
 import TransformationSection from '@/components/artist/TransformationSection.vue'
 import GenreExamplesSection from '@/components/artist/GenreExamplesSection.vue'
-import ArtistSuccessSection from '@/components/artist/ArtistSuccessSection.vue'
+import ArtistMetricsSection from '@/components/artist/ArtistMetricsSection.vue'
 import PlatformIntegrationsSection from '@/components/artist/PlatformIntegrationsSection.vue'
 import PricingSection from '@/components/pricing/PricingSection.vue'
 
@@ -63,7 +63,7 @@ export default {
 		ArtistHeroSection,
 		TransformationSection,
 		GenreExamplesSection,
-		ArtistSuccessSection,
+		ArtistMetricsSection,
 		PlatformIntegrationsSection,
 		PricingSection
 	},
