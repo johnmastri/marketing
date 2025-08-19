@@ -1,0 +1,180 @@
+{
+	"hero": {
+		"headline": "Ship studio-grade content every day",
+		"subheadline": "Generate, version, and distribute short-form across IG, TikTok, YouTube Shorts, X—with AI personas that stay visually consistent.",
+		"primaryCTA": "Start Free Trial",
+		"secondaryCTA": "Watch 2-min demo",
+		"socialProof": "Used by indie labels, solo creators, and boutique studios"
+	},
+	"valuePillars": {
+		"headline": "Scale without losing your identity",
+		"description": "Three core capabilities that keep your brand consistent while automating your content pipeline",
+		"pillars": [
+			{
+				"title": "Consistent Identity",
+				"description": "Keep look + vibe locked with persona rigs (LoRA, refs, prompts). Your AI learns your unique style and never drifts.",
+				"icon": "identity"
+			},
+			{
+				"title": "Automated Output", 
+				"description": "Batch-generate shorts, covers, thumbs, captions in one flow. From concept to post-ready content in minutes.",
+				"icon": "automation"
+			},
+			{
+				"title": "Ship Everywhere",
+				"description": "Schedule via APIs with guardrails for each platform. Native posting to IG, TikTok, YouTube Shorts, X, and more.",
+				"icon": "distribution"
+			}
+		]
+	},
+	"problem": {
+		"headline": "Posting consistently is exhausting",
+		"description": "Different platforms, different formats, same you—but it never looks cohesive. You spend hours recreating your brand for each channel, or worse, your content looks scattered and unprofessional."
+	},
+	"solution": {
+		"headline": "Train your AI persona once. Get perfectly branded content everywhere.",
+		"description": "Focus on your art, not your posting schedule. Scale your brand presence without scaling your team."
+	},
+	"coreFeatures": {
+		"headline": "Everything you need to scale your content",
+		"description": "Powerful tools that work together to maintain your brand while automating your workflow",
+		"features": [
+			{
+				"title": "Persona Manager",
+				"description": "Multiple LoRAs per persona (e.g., Flux candid + \"Higgs Field\" cinematic). Face refs, pose seeds, prompt kits, colorways, do/don'ts.",
+				"icon": "persona"
+			},
+			{
+				"title": "Content Engine",
+				"description": "Shorts generator (9:16), performance mockups, cover art, thumbnails. Captions: hook lines, CTAs, keyword targets.",
+				"icon": "content"
+			},
+			{
+				"title": "Distribution Hub",
+				"description": "Native scheduling to IG, TikTok, YouTube Shorts, X, FB, Pinterest. Draft workflows where APIs require manual finalize.",
+				"icon": "distribution"
+			},
+			{
+				"title": "Versioning & A/B",
+				"description": "Label takes A/B/C, auto-tag assets, compare watch % and hold. Data-driven optimization for better performance.",
+				"icon": "analytics"
+			}
+		]
+	},
+	"howItWorks": {
+		"headline": "How it works",
+		"steps": [
+			{
+				"title": "Define Persona",
+				"description": "Upload refs, link LoRA(s), set style guardrails, add negative prompts. Build your AI identity once."
+			},
+			{
+				"title": "Generate Sets",
+				"description": "Spin 10–50 variants per brief. Auto-crop, safe margins, text-safe zones, A/B tags for testing."
+			},
+			{
+				"title": "Approve & Caption",
+				"description": "Pick winners, autowrite hooks/hashtags, light edits, brand check. Quality control in your hands."
+			},
+			{
+				"title": "Distribute & Learn",
+				"description": "Push to IG/TikTok/Shorts/X. Track retention, CTR, saves, comments. Iterate and improve."
+			}
+		]
+	},
+	"platforms": {
+		"headline": "One brand, every platform",
+		"description": "Your content stays consistent across all major social platforms"
+	},
+	"integrations": {
+		"headline": "Built on proven technology",
+		"description": "Powered by industry-leading AI models and social platform APIs",
+		"categories": [
+			{
+				"title": "Model Runtimes",
+				"items": ["fal.ai", "Replicate"]
+			},
+			{
+				"title": "Image/Video Models", 
+				"items": ["Flux family", "IP-Adapter", "ControlNets"]
+			},
+			{
+				"title": "LLMs",
+				"items": ["OpenRouter-compatible", "GPT-4", "Claude"]
+			},
+			{
+				"title": "Social APIs",
+				"items": ["Instagram", "TikTok", "YouTube", "X", "Facebook", "Pinterest"]
+			}
+		]
+	},
+	"gallery": {
+		"headline": "See it in action",
+		"description": "Real examples of consistent branding across platforms"
+	},
+	"results": {
+		"headline": "Real results from real creators",
+		"description": "See how creators are scaling their content without losing their brand identity",
+		"metrics": [
+			{
+				"before": "2 posts/week",
+				"after": "14 posts/week",
+				"description": "without losing the brand look"
+			},
+			{
+				"before": "3 hours per post",
+				"after": "20 minutes per post",
+				"description": "from concept to published"
+			},
+			{
+				"before": "Inconsistent engagement",
+				"after": "5x output, same identity",
+				"description": "across three personas"
+			}
+		]
+	},
+	"newsletter": {
+		"headline": "Get early access",
+		"description": "Join 500+ creators on the waitlist. Be first to know when we launch.",
+		"placeholder": "your@email.com",
+		"cta": "Join Waitlist",
+		"success": "You're on the list! We'll be in touch soon."
+	},
+	"faq": {
+		"headline": "Frequently asked questions",
+		"items": [
+			{
+				"question": "Can I import existing LoRAs/refs?",
+				"answer": "Yes—attach them to a persona and set the guardrails. Upload your existing LoRA models, reference images, and style guides. Our system integrates with your current workflow."
+			},
+			{
+				"question": "Can I post directly to IG/TikTok?",
+				"answer": "We use official APIs where available; some flows publish drafts for manual finalize. Full automation for supported platforms, with review workflows for others."
+			},
+			{
+				"question": "Who owns the outputs?",
+				"answer": "You do. You can export raw assets and metadata anytime. Full ownership of all generated content, with no usage restrictions or licensing fees."
+			},
+			{
+				"question": "How does the AI learn my style?",
+				"answer": "Through persona rigs combining LoRAs, reference images, prompt kits, and style guardrails. Upload 10-20 examples and set visual preferences for consistent results."
+			},
+			{
+				"question": "Which platforms do you support?",
+				"answer": "Instagram, TikTok, YouTube Shorts, X (Twitter), Facebook, and Pinterest. We optimize content format, sizing, and captions for each platform automatically."
+			},
+			{
+				"question": "What's included in A/B testing?",
+				"answer": "Generate multiple variants per concept, auto-tag for tracking, and compare performance metrics like watch time, CTR, saves, and comments across versions."
+			},
+			{
+				"question": "Can I review content before it posts?",
+				"answer": "Absolutely. Set up automatic posting or review everything before it goes live. Approval workflows, team collaboration, and scheduling controls included."
+			},
+			{
+				"question": "How much does it cost?",
+				"answer": "Plans start at $19/month with credit-based usage. All plans include persona training and multi-platform posting. Higher tiers include LoRA training credits and priority processing."
+			}
+		]
+	}
+}

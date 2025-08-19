@@ -1,0 +1,109 @@
+{
+	"headline": "Simple, transparent pricing",
+	"description": "Choose the plan that fits your needs. All plans include persona training and multi-platform posting.",
+	"note": "37% margin baseline. Final pricing subject to change before launch.",
+	"plans": [
+		{
+			"key": "starter",
+			"name": "Starter",
+			"description": "Perfect for individual creators getting started",
+			"priceMonthly": 19,
+			"priceAnnual": 15,
+			"badge": null,
+			"features": [
+				"1 persona profile",
+				"Single platform posting",
+				"Basic scheduling",
+				"Email support",
+				"50 posts per month"
+			],
+			"limitations": [
+				"No image training included",
+				"Limited to 1 platform",
+				"Basic templates only"
+			]
+		},
+		{
+			"key": "creator",
+			"name": "Creator",
+			"description": "For serious creators building their brand",
+			"priceMonthly": 39,
+			"priceAnnual": 32,
+			"badge": "Most Popular",
+			"features": [
+				"1 persona profile",
+				"Up to 3 platforms",
+				"1 image training per month",
+				"Advanced scheduling",
+				"Custom templates",
+				"Priority support",
+				"150 posts per month"
+			],
+			"limitations": []
+		},
+		{
+			"key": "studio",
+			"name": "Studio",
+			"description": "For teams and growing businesses",
+			"priceMonthly": 79,
+			"priceAnnual": 65,
+			"badge": null,
+			"features": [
+				"3 persona profiles",
+				"All platforms included",
+				"3 image trainings per month",
+				"Advanced analytics",
+				"Team collaboration",
+				"Custom branding",
+				"500 posts per month"
+			],
+			"limitations": []
+		},
+		{
+			"key": "agency",
+			"name": "Agency",
+			"description": "For agencies managing multiple brands",
+			"priceMonthly": 159,
+			"priceAnnual": 130,
+			"badge": null,
+			"features": [
+				"Unlimited personas",
+				"All platforms included",
+				"Unlimited image training",
+				"White-label options",
+				"Priority queue",
+				"Dedicated support",
+				"Unlimited posts"
+			],
+			"limitations": []
+		}
+	],
+	"addOns": [
+		{
+			"name": "Extra Image Training",
+			"description": "Additional persona training session",
+			"price": 29,
+			"unit": "per training"
+		},
+		{
+			"name": "Priority Support",
+			"description": "24/7 priority customer support",
+			"price": 19,
+			"unit": "per month"
+		}
+	],
+	"faq": [
+		{
+			"question": "Can I change plans anytime?",
+			"answer": "Yes, upgrade or downgrade anytime. Changes take effect on your next billing cycle."
+		},
+		{
+			"question": "What's included in image training?",
+			"answer": "Upload 10-20 images of your work or style. Our AI learns your visual preferences and applies them to generated content."
+		},
+		{
+			"question": "Do you offer refunds?",
+			"answer": "Yes, 30-day money-back guarantee on all plans. No questions asked."
+		}
+	]
+}

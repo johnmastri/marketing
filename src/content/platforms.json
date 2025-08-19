@@ -1,0 +1,40 @@
+{
+	"items": [
+		{
+			"key": "instagram",
+			"name": "Instagram",
+			"color": "#E4405F",
+			"formats": ["Posts", "Stories", "Reels"]
+		},
+		{
+			"key": "tiktok",
+			"name": "TikTok",
+			"color": "#000000",
+			"formats": ["Videos", "Images"]
+		},
+		{
+			"key": "youtube",
+			"name": "YouTube Shorts",
+			"color": "#FF0000",
+			"formats": ["Shorts", "Thumbnails"]
+		},
+		{
+			"key": "facebook",
+			"name": "Facebook",
+			"color": "#1877F2",
+			"formats": ["Posts", "Stories"]
+		},
+		{
+			"key": "pinterest",
+			"name": "Pinterest",
+			"color": "#E60023",
+			"formats": ["Pins", "Story Pins"]
+		},
+		{
+			"key": "x",
+			"name": "X",
+			"color": "#000000",
+			"formats": ["Posts", "Images"]
+		}
+	]
+}
