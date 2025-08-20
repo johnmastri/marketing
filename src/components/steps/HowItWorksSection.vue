@@ -1,5 +1,5 @@
 <template>
-	<section class="border-t bg-muted/30">
+	<section class="border-t bg-muted/30 relative" :style="{ background: bg('how-it-works') }">
 		<div class="container mx-auto max-w-6xl px-4 py-16 md:py-20">
 			<div class="text-center mb-12">
 				<h2 class="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4">
@@ -21,22 +21,31 @@
 				/>
 			</div>
 		</div>
+		<GradientControl section-id="how-it-works" />
 	</section>
 </template>
 
 <script>
 import StepCard from './StepCard.vue'
 import copyData from '@/content/copy.json'
+import GradientControl from '@/components/GradientControl.vue'
+import { useGradientsStore } from '@/stores/gradients'
 
 export default {
 	name: 'HowItWorksSection',
 	components: {
-		StepCard
+		StepCard,
+		GradientControl
 	},
 	data() {
+		const gradients = useGradientsStore()
 		return {
-			copy: copyData
+			copy: copyData,
+			gradients
 		}
+	},
+	methods: {
+		bg(section){ return this.gradients.getCurrent(section) }
 	}
 }
 </script>

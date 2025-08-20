@@ -1,5 +1,5 @@
 <template>
-	<section ref="heroSection" class="relative overflow-hidden bg-background">
+	<section ref="heroSection" class="relative overflow-hidden bg-background" :style="{ background: bg('hero') }">
 		<div class="container mx-auto max-w-6xl px-4 py-16 md:py-24 lg:py-32">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 				<div class="space-y-6">
@@ -18,6 +18,7 @@
 				</div>
 			</div>
 		</div>
+		<GradientControl section-id="hero" />
 	</section>
 </template>
 
@@ -29,6 +30,8 @@ import HeroActions from './HeroActions.vue'
 import HeroVisual from './HeroVisual.vue'
 import SocialProofStrip from './SocialProofStrip.vue'
 import copyData from '@/content/copy.json'
+import GradientControl from '@/components/GradientControl.vue'
+import { useGradientsStore } from '@/stores/gradients'
 
 export default {
 	name: 'HeroSection',
@@ -37,11 +40,14 @@ export default {
 		HeroSubtitle,
 		HeroActions,
 		HeroVisual,
-		SocialProofStrip
+		SocialProofStrip,
+		GradientControl
 	},
 	data() {
+		const gradients = useGradientsStore()
 		return {
-			copy: copyData
+			copy: copyData,
+			gradients
 		}
 	},
 	mounted() {
@@ -75,7 +81,8 @@ export default {
 				duration: 0.8,
 				ease: 'power2.out'
 			}, '-=0.6')
-		}
+		},
+		bg(section){ return this.gradients.getCurrent(section) }
 	}
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-	<section class="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 py-20 lg:py-32">
+	<section class="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 py-20 lg:py-32" :style="{ background: bg('artist-hero') }">
 		<div class="container mx-auto max-w-6xl px-4">
 			<div class="grid lg:grid-cols-2 gap-12 items-center">
 				<div class="space-y-8">
@@ -27,7 +27,7 @@
 						</button>
 						<button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 py-3 text-base">
 							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 0 1-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
 							</svg>
 							See It In Action
 						</button>
@@ -65,7 +65,7 @@
 									<div class="bg-background rounded-lg p-3 border">
 										<div class="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded mb-2 flex items-center justify-center">
 											<svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 0 1 2.828 0L16 16m-2-2l1.586-1.586a2 2 0 0 1 2.828 0L20 14m-6-6h.01M6 20h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z" />
 											</svg>
 										</div>
 										<div class="text-xs text-muted-foreground">Instagram Post</div>
@@ -73,7 +73,7 @@
 									<div class="bg-background rounded-lg p-3 border">
 										<div class="aspect-square bg-gradient-to-br from-pink-500/20 to-orange-500/20 rounded mb-2 flex items-center justify-center">
 											<svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14M5 18h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z" />
 											</svg>
 										</div>
 										<div class="text-xs text-muted-foreground">TikTok Video</div>
@@ -91,11 +91,18 @@
 		</div>
 		
 		<div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+		<GradientControl section-id="artist-hero" />
 	</section>
 </template>
 
 <script>
+import GradientControl from '@/components/GradientControl.vue'
+import { useGradientsStore } from '@/stores/gradients'
+
 export default {
-	name: 'ArtistHeroSection'
+	name: 'ArtistHeroSection',
+	components: { GradientControl },
+	data() { return { gradients: useGradientsStore() } },
+	methods: { bg(section){ return this.gradients.getCurrent(section) } }
 }
 </script>

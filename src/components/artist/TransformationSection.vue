@@ -1,5 +1,5 @@
 <template>
-	<section class="py-20 bg-muted/30">
+	<section class="py-20 bg-muted/30 relative" :style="{ background: bg('transformation') }">
 		<div class="container mx-auto max-w-6xl px-4">
 			<div class="text-center mb-16">
 				<h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
@@ -54,6 +54,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- Close first column -->
 				</div>
 
 				<div class="space-y-6">
@@ -105,7 +106,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				<!-- Close second column -->
+			</div>
 			</div>
 
 			<div class="text-center mt-12">
@@ -127,11 +129,18 @@
 				</div>
 			</div>
 		</div>
+		<GradientControl section-id="transformation" />
 	</section>
 </template>
 
 <script>
+import GradientControl from '@/components/GradientControl.vue'
+import { useGradientsStore } from '@/stores/gradients'
+
 export default {
-	name: 'TransformationSection'
+	name: 'TransformationSection',
+	components: { GradientControl },
+	data() { return { gradients: useGradientsStore() } },
+	methods: { bg(section){ return this.gradients.getCurrent(section) } }
 }
 </script>

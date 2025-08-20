@@ -1,5 +1,5 @@
 <template>
-	<section class="border-t bg-muted/30">
+	<section class="border-t bg-muted/30 relative" :style="{ background: bg('pricing') }">
 		<div class="container mx-auto max-w-6xl px-4 py-16 md:py-20">
 			<div class="text-center mb-12">
 				<h2 class="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4">
@@ -48,6 +48,7 @@
 				</div>
 			</div>
 		</div>
+		<GradientControl section-id="pricing" />
 	</section>
 </template>
 
@@ -55,17 +56,22 @@
 import BillingToggle from './BillingToggle.vue'
 import PlanGrid from './PlanGrid.vue'
 import { usePricingStore } from '@/stores/pricing'
+import GradientControl from '@/components/GradientControl.vue'
+import { useGradientsStore } from '@/stores/gradients'
 
 export default {
 	name: 'PricingSection',
 	components: {
 		BillingToggle,
-		PlanGrid
+		PlanGrid,
+		GradientControl
 	},
 	data() {
 		const pricingStore = usePricingStore()
+		const gradients = useGradientsStore()
 		return {
-			pricingStore
+			pricingStore,
+			gradients
 		}
 	},
 	computed: {
@@ -73,6 +79,7 @@ export default {
 		plans() { return this.pricingStore.plans },
 		addOns() { return this.pricingStore.addOns },
 		faqItems() { return this.pricingStore.faqItems }
-	}
+	},
+	methods: { bg(section){ return this.gradients.getCurrent(section) } }
 }
 </script>

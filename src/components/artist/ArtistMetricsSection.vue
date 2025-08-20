@@ -1,5 +1,5 @@
 <template>
-	<section class="py-20 bg-muted/30">
+	<section class="py-20 bg-muted/30 relative" :style="{ background: bg('artist-metrics') }">
 		<div class="container mx-auto max-w-6xl px-4">
 			<div class="space-y-12">
 				<div class="text-center">
@@ -127,11 +127,18 @@
 				</div>
 			</div>
 		</div>
+		<GradientControl section-id="artist-metrics" />
 	</section>
 </template>
 
 <script>
+import GradientControl from '@/components/GradientControl.vue'
+import { useGradientsStore } from '@/stores/gradients'
+
 export default {
-	name: 'ArtistMetricsSection'
+	name: 'ArtistMetricsSection',
+	components: { GradientControl },
+	data() { return { gradients: useGradientsStore() } },
+	methods: { bg(section){ return this.gradients.getCurrent(section) } }
 }
 </script>

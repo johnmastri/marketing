@@ -1,5 +1,5 @@
 <template>
-	<section class="py-20">
+	<section class="py-20 relative" :style="{ background: bg('artist-platforms') }">
 		<div class="container mx-auto max-w-6xl px-4">
 			<div class="text-center mb-16">
 				<h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
@@ -109,12 +109,17 @@
 				</div>
 			</div>
 		</div>
+		<GradientControl section-id="artist-platforms" />
 	</section>
 </template>
 
 <script>
+import GradientControl from '@/components/GradientControl.vue'
+import { useGradientsStore } from '@/stores/gradients'
+
 export default {
 	name: 'PlatformIntegrationsSection',
+	components: { GradientControl },
 	data() {
 		return {
 			hoveredPlatform: null,
@@ -161,9 +166,11 @@ export default {
 					iconColor: 'text-gray-800',
 					icon: 'AppleMusicIcon'
 				}
-			]
+			],
+			gradients: useGradientsStore()
 		}
 	},
+	methods: { bg(section){ return this.gradients.getCurrent(section) } },
 	components: {
 		InstagramIcon: {
 			template: `
