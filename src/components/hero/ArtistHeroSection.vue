@@ -5,11 +5,10 @@
 				<div class="space-y-8">
 					<div class="space-y-4">
 						<h1 class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-							Stop feeling like you're 
-							<span class="text-primary">falling behind</span>
+							{{ hero.headline }}
 						</h1>
 						<p class="text-xl text-muted-foreground leading-relaxed">
-							Create pro-level content that matches your sound—without the team.
+							{{ hero.subheadline }}
 						</p>
 					</div>
 					
@@ -23,13 +22,13 @@
 
 					<div class="flex flex-col sm:flex-row gap-4">
 						<button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 py-3 text-base">
-							Start Free Trial
+							{{ hero.primaryCTA }}
 						</button>
 						<button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 py-3 text-base">
 							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 0 1-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
 							</svg>
-							See It In Action
+							{{ hero.secondaryCTA }}
 						</button>
 					</div>
 				</div>
@@ -91,18 +90,26 @@
 		</div>
 		
 		<div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+		<CopyControl />
 		<GradientControl section-id="artist-hero" />
 	</section>
 </template>
 
 <script>
 import GradientControl from '@/components/GradientControl.vue'
+import CopyControl from '@/components/CopyControl.vue'
 import { useGradientsStore } from '@/stores/gradients'
+import { useCopyStore } from '@/stores/copy'
 
 export default {
 	name: 'ArtistHeroSection',
-	components: { GradientControl },
-	data() { return { gradients: useGradientsStore() } },
+	components: { GradientControl, CopyControl },
+	data() { return { gradients: useGradientsStore(), copyStore: useCopyStore() } },
+	computed: {
+		hero() {
+			return this.copyStore.current || { headline: "Stop feeling like you're falling behind", subheadline: 'Create pro-level content that matches your sound—without the team.', primaryCTA: 'Start Free Trial', secondaryCTA: 'See It In Action', socialProof: '' }
+		}
+	},
 	methods: { bg(section){ return this.gradients.getCurrent(section) } }
 }
 </script>

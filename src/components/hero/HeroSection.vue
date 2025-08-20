@@ -3,21 +3,22 @@
 		<div class="container mx-auto max-w-6xl px-4 py-16 md:py-24 lg:py-32">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 				<div class="space-y-6">
-					<HeroTitle :text="copy.hero.headline" />
-					<HeroSubtitle :text="copy.hero.subheadline" />
+					<HeroTitle :text="hero.headline" />
+					<HeroSubtitle :text="hero.subheadline" />
 					<HeroActions 
-						:primary-text="copy.hero.primaryCTA"
-						:secondary-text="copy.hero.secondaryCTA"
+						:primary-text="hero.primaryCTA"
+						:secondary-text="hero.secondaryCTA"
 						:primary-disabled="true"
 						secondary-to="/pricing"
 					/>
-					<SocialProofStrip :social-proof-text="copy.hero.socialProof" />
+					<SocialProofStrip :social-proof-text="hero.socialProof" />
 				</div>
 				<div class="lg:order-first">
 					<HeroVisual />
 				</div>
 			</div>
 		</div>
+		<CopyControl />
 		<GradientControl section-id="hero" />
 	</section>
 </template>
@@ -31,7 +32,9 @@ import HeroVisual from './HeroVisual.vue'
 import SocialProofStrip from './SocialProofStrip.vue'
 import copyData from '@/content/copy.json'
 import GradientControl from '@/components/GradientControl.vue'
+import CopyControl from '@/components/CopyControl.vue'
 import { useGradientsStore } from '@/stores/gradients'
+import { useCopyStore } from '@/stores/copy'
 
 export default {
 	name: 'HeroSection',
@@ -41,13 +44,21 @@ export default {
 		HeroActions,
 		HeroVisual,
 		SocialProofStrip,
-		GradientControl
+		GradientControl,
+		CopyControl
 	},
 	data() {
 		const gradients = useGradientsStore()
+		const copyStore = useCopyStore()
 		return {
 			copy: copyData,
-			gradients
+			gradients,
+			copyStore
+		}
+	},
+	computed: {
+		hero() {
+			return this.copyStore.current || this.copy.hero
 		}
 	},
 	mounted() {
