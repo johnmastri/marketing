@@ -3,6 +3,8 @@ import Home from '@/views/Home.vue'
 import Pricing from '@/views/Pricing.vue'
 import Gallery from '@/views/Gallery.vue'
 import FAQ from '@/views/FAQ.vue'
+import Blueprint from '@/views/Blueprint.vue'
+import Human from '@/views/Human.vue'
 
 const routes = [
 	{
@@ -39,6 +41,24 @@ const routes = [
 		meta: {
 			title: 'FAQ — Consystnt',
 			description: 'Frequently asked questions about Consystnt, AI persona training, and multi-platform content generation.'
+		}
+	},
+	{
+		path: '/blueprint',
+		name: 'blueprint',
+		component: Blueprint,
+		meta: {
+			title: 'Consistency Creates Growth — Consystnt',
+			description: 'AI-powered accountability for creators & small businesses. Get your blueprint for consistent growth and engagement.'
+		}
+	},
+	{
+		path: '/human',
+		name: 'human',
+		component: Human,
+		meta: {
+			title: 'Stay Human. Stay Consistent — Consystnt',
+			description: 'You\'re doing great things — now it\'s time to inspire others. Consystnt keeps you accountable while keeping your humanity at the center.'
 		}
 	}
 ]
