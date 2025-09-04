@@ -108,8 +108,8 @@
 			<GradientControl section-id="accountability" />
 		</section>
 
-		<!-- Business Benefits Section -->
-		<BusinessBenefitsSection />
+		<!-- Business Stories Section -->
+		<ScrollLockedBusinessStories />
 
 		<!-- Streaks Section (Disabled) -->
 		<!-- 
@@ -190,14 +190,15 @@
 						<h3 class="text-xl font-semibold mb-2">Audit</h3>
 						<p class="text-sm opacity-70">Analyze your authentic style</p>
 						
-						<!-- Subtle UI overlay -->
-						<div class="mt-4 bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-							<div class="space-y-2">
-								<div class="h-2 bg-blue-400/50 rounded w-full"></div>
-								<div class="h-2 bg-blue-400/30 rounded w-3/4"></div>
-								<div class="h-2 bg-blue-400/20 rounded w-1/2"></div>
-							</div>
-						</div>
+						(intake: personal + business + style)
+
+AI-powered intake to capture you and your brand
+
+Share your wins, struggles, and style—get a smart assessment
+
+Define how you want to show up: authentic, faceless, or AI-assisted
+
+Your personal + business audit, powered by AI
 					</div>
 					
 					<div class="text-4xl opacity-50 hidden md:block">→</div>
@@ -210,22 +211,15 @@
 						<h3 class="text-xl font-semibold mb-2">Align</h3>
 						<p class="text-sm opacity-70">Create your personalized plan</p>
 						
-						<div class="mt-4 bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-							<div class="space-y-2">
-								<div class="flex items-center gap-2">
-									<div class="w-3 h-3 bg-green-400 rounded-full"></div>
-									<div class="h-2 bg-green-400/50 rounded flex-1"></div>
-								</div>
-								<div class="flex items-center gap-2">
-									<div class="w-3 h-3 bg-green-400 rounded-full"></div>
-									<div class="h-2 bg-green-400/50 rounded flex-1"></div>
-								</div>
-								<div class="flex items-center gap-2">
-									<div class="w-3 h-3 bg-gray-400 rounded-full"></div>
-									<div class="h-2 bg-gray-400/30 rounded flex-1"></div>
-								</div>
-							</div>
-						</div>
+						(competition + metrics + positioning)
+
+Benchmark yourself against competitors and industry standards
+
+See where you stand—and the gaps you can close
+
+AI metrics reveal your path to growth
+
+Turn assessment into a clear competitive strategy
 					</div>
 					
 					<div class="text-4xl opacity-50 hidden md:block">→</div>
@@ -235,18 +229,18 @@
 						<div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
 							<div class="text-4xl">🎯</div>
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Action</h3>
+						<h3 class="text-xl font-semibold mb-2">Action/Automate</h3>
 						<p class="text-sm opacity-70">Execute with accountability</p>
 						
-						<div class="mt-4 bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-							<div class="flex items-center justify-between mb-2">
-								<span class="text-xs">Daily Post</span>
-								<div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-xs">:47</div>
-							</div>
-							<div class="w-full h-2 bg-gray-600 rounded">
-								<div class="h-2 bg-purple-400 rounded w-3/4"></div>
-							</div>
-						</div>
+						(personalized action cards, with preview/blur for signup)
+
+Preview your first action cards—sign up to unlock the rest
+
+Your roadmap comes alive with guided actions
+
+Daily, personalized action cards to keep you consistent
+
+Take the first step now. The rest unlock when you’re ready.
 					</div>
 				</div>
 			</div>
@@ -290,14 +284,14 @@
 
 <script>
 import GradientControl from '@/components/GradientControl.vue'
-import BusinessBenefitsSection from '@/components/human/BusinessBenefitsSection.vue'
+import ScrollLockedBusinessStories from '@/components/human/ScrollLockedBusinessStories.vue'
 import SpotlightCarousel from '@/components/human/SpotlightCarousel.vue'
 
 export default {
 	name: 'Human',
 	components: {
 		GradientControl,
-		BusinessBenefitsSection,
+		ScrollLockedBusinessStories,
 		SpotlightCarousel
 	},
 	data() {
