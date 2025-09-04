@@ -49,10 +49,10 @@
 			<div class="relative z-10 text-center max-w-5xl mx-auto px-6">
 				<h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
 					You're doing great things —<br>
-					now it's time to inspire others.
+					consistently share your story with others.
 				</h1>
 				<p class="text-xl md:text-2xl mb-12 opacity-90 max-w-4xl mx-auto">
-					Ai-powered smart prompts and momentum tracking turn your story into lasting growth — without the overthinking.
+					Ai-powered smart prompts and momentum tracking turn your story into lasting growth on social media — without the overthinking.
 				</p>
 				<button class="bg-white text-gray-900 px-12 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors">
 					Get Started
@@ -88,8 +88,15 @@
 							You have enough to think about.
 						</h2>
 						<p class="text-xl text-gray-600 leading-relaxed">
-							Consystnt takes the guesswork out of being seen by the right people with intelligent prompts designed just for you — less thinking, more connecting.
+							Consystnt takes the guesswork out of being seen by the right people with sustom prompts that guide what to post, when to post, and how to connect with your audience — less thinking, more connecting.
 						</p>
+
+						<ul class="bullets">
+							<li><strong>Know exactly what to post</strong> - tailored prompts designed for your brand and audience.</li>
+							<li><strong>Stay on schedule</strong> - reminders and timing cues so your posts land when they’ll have impact.</li>
+							<li><strong>Build real engagement</strong> - guidance on how to interact and grow your audience authentically.</li>
+							<li><strong>Reduce overwhelm</strong> - focus on your work while Consystnt keeps your social presence active.</li>
+						</ul>
 						<!-- <div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
 							<p class="text-lg font-medium text-purple-900">
 								Less thinking, more connecting.
@@ -155,122 +162,10 @@
 		</section>
 		-->
 
-			<!-- Humanity Section -->
-			<section class="relative py-32 overflow-hidden">
-			<!-- Cinematic full-width lifestyle photo -->
-			<div class="absolute inset-0 bg-gradient-to-r from-amber-600 via-orange-500 to-yellow-600">
-				<div class="absolute inset-0 bg-black/40"></div>
-				<!-- Small business owner with customers scene -->
-				<div class="absolute inset-0 flex items-center justify-center">
-					<div class="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 opacity-30">
-						<div class="space-y-4">
-							<div class="w-full h-32 bg-white/20 rounded-lg backdrop-blur-sm"></div>
-							<div class="w-3/4 h-24 bg-white/15 rounded-lg backdrop-blur-sm"></div>
-						</div>
-						<div class="space-y-4">
-							<div class="w-full h-40 bg-white/25 rounded-lg backdrop-blur-sm"></div>
-							<div class="w-1/2 h-16 bg-white/15 rounded-lg backdrop-blur-sm"></div>
-						</div>
-						<div class="space-y-4">
-							<div class="w-full h-28 bg-white/20 rounded-lg backdrop-blur-sm"></div>
-							<div class="w-4/5 h-20 bg-white/15 rounded-lg backdrop-blur-sm"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-				<h2 class="text-4xl md:text-6xl font-bold mb-8">
-					Real people. Real stories.
-				</h2>
-				<p class="text-xl md:text-2xl opacity-90 leading-relaxed">
-					Your humanity is what connects with people. 
-					Consystnt just makes sure the world sees it.
-				</p>
-			</div>
-			<GradientControl section-id="humanity" />
-		</section>
+		
 
-		<!-- Community Section -->
-		<section class="bg-white py-20">
-			<div class="max-w-6xl mx-auto px-6">
-				<div class="text-center mb-16">
-					<h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
-						You're not alone.
-					</h2>
-					<p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-						Join a community of creators and entrepreneurs on the same journey. 
-						Learn, grow, and get inspired by others who are showing up every day.
-					</p>
-				</div>
-				
-				<!-- Photorealistic group collage -->
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<div class="space-y-6">
-						<!-- Fitness influencer -->
-						<div class="aspect-[3/4] rounded-2xl bg-gradient-to-br from-blue-400 via-teal-500 to-green-600 relative overflow-hidden">
-							<div class="absolute inset-0 bg-black/20"></div>
-							<div class="absolute bottom-4 left-4 right-4">
-								<div class="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-									<div class="flex items-center gap-2">
-										<div class="w-8 h-8 bg-green-500 rounded-full"></div>
-										<div>
-											<div class="text-sm font-semibold">@FitJourney</div>
-											<div class="text-xs text-gray-600">15-day streak</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Exercise equipment mockup -->
-							<div class="absolute top-1/4 right-4 w-16 h-20 bg-gray-800/40 rounded-lg backdrop-blur-sm"></div>
-						</div>
-					</div>
-					
-					<div class="space-y-6">
-						<!-- Chef -->
-						<div class="aspect-[3/4] rounded-2xl bg-gradient-to-br from-orange-400 via-red-500 to-pink-600 relative overflow-hidden">
-							<div class="absolute inset-0 bg-black/20"></div>
-							<div class="absolute bottom-4 left-4 right-4">
-								<div class="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-									<div class="flex items-center gap-2">
-										<div class="w-8 h-8 bg-orange-500 rounded-full"></div>
-										<div>
-											<div class="text-sm font-semibold">@ChefLife</div>
-											<div class="text-xs text-gray-600">42-day streak</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Cooking elements -->
-							<div class="absolute top-1/3 left-4 w-12 h-12 bg-white/30 rounded-full backdrop-blur-sm"></div>
-							<div class="absolute top-1/4 right-6 w-8 h-16 bg-yellow-300/40 rounded-lg backdrop-blur-sm"></div>
-						</div>
-					</div>
-					
-					<div class="space-y-6">
-						<!-- Freelancer -->
-						<div class="aspect-[3/4] rounded-2xl bg-gradient-to-br from-purple-400 via-indigo-500 to-blue-600 relative overflow-hidden">
-							<div class="absolute inset-0 bg-black/20"></div>
-							<div class="absolute bottom-4 left-4 right-4">
-								<div class="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-									<div class="flex items-center gap-2">
-										<div class="w-8 h-8 bg-purple-500 rounded-full"></div>
-										<div>
-											<div class="text-sm font-semibold">@DesignDaily</div>
-											<div class="text-xs text-gray-600">8-day streak</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Design tools -->
-							<div class="absolute top-1/4 left-4 w-20 h-12 bg-white/30 rounded-lg backdrop-blur-sm"></div>
-							<div class="absolute center w-14 h-14 bg-indigo-300/40 rounded-lg backdrop-blur-sm"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<GradientControl section-id="community" />
-		</section>
+		<!-- Spotlight Carousel -->
+		<SpotlightCarousel />
 
 	
 
@@ -282,7 +177,7 @@
 						AI that supports, not replaces.
 					</h2>
 					<p class="text-xl opacity-80 max-w-4xl mx-auto">
-						An extensive intake captures your goals and voice. Our AI coaching translates it into clear, actionable steps for growth — with the option to generate AI content for your feed or have the AI coach you through creating and posting, keeping your humanity at the core.
+						An extensive intake captures your goals and voice. Our AI translates them into clear, actionable steps — plus the option to generate content for your feed or get coached through the process..
 					</p>
 				</div>
 				
@@ -292,7 +187,7 @@
 						<div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
 							<div class="text-4xl">🪞</div>
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Mirror</h3>
+						<h3 class="text-xl font-semibold mb-2">Audit</h3>
 						<p class="text-sm opacity-70">Analyze your authentic style</p>
 						
 						<!-- Subtle UI overlay -->
@@ -312,7 +207,7 @@
 						<div class="w-32 h-32 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
 							<div class="text-4xl">📋</div>
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Blueprint</h3>
+						<h3 class="text-xl font-semibold mb-2">Align</h3>
 						<p class="text-sm opacity-70">Create your personalized plan</p>
 						
 						<div class="mt-4 bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">
@@ -340,7 +235,7 @@
 						<div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
 							<div class="text-4xl">🎯</div>
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Action Cards</h3>
+						<h3 class="text-xl font-semibold mb-2">Action</h3>
 						<p class="text-sm opacity-70">Execute with accountability</p>
 						
 						<div class="mt-4 bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">
@@ -380,11 +275,12 @@
 			
 			<div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
 				<h2 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-					 Your shortcut to social momentum and brand visibility.<br/>Get Consystnt. 
+					 The fastest way to grow your audience and stay consistent. 
+					 <!--"The fastest way to grow your audience and stay consistent. Get Consystnt. -->
 				</h2>
 				
 				<button class="bg-white text-gray-900 px-16 py-5 rounded-full text-xl font-semibold hover:bg-gray-100 transition-colors">
-					Start Now
+					Get Consystnt
 				</button>
 			</div>
 			<GradientControl section-id="closing" />
@@ -395,12 +291,14 @@
 <script>
 import GradientControl from '@/components/GradientControl.vue'
 import BusinessBenefitsSection from '@/components/human/BusinessBenefitsSection.vue'
+import SpotlightCarousel from '@/components/human/SpotlightCarousel.vue'
 
 export default {
 	name: 'Human',
 	components: {
 		GradientControl,
-		BusinessBenefitsSection
+		BusinessBenefitsSection,
+		SpotlightCarousel
 	},
 	data() {
 		return {
@@ -427,5 +325,10 @@ export default {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.bullets {
+	color: black;
+	font-size: 15px;
 }
 </style>
