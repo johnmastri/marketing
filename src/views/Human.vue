@@ -101,10 +101,13 @@
 			<GradientControl section-id="accountability" />
 		</section>
 
-		<!-- Streaks Section -->
+		<!-- Business Benefits Section -->
+		<BusinessBenefitsSection />
+
+		<!-- Streaks Section (Disabled) -->
+		<!-- 
 		<section class="bg-black py-20">
 			<div class="max-w-4xl mx-auto text-center px-6">
-				<!-- Smartphone showing streak counter -->
 				<div class="flex justify-center mb-12">
 					<div class="relative">
 						<div class="w-64 h-96 bg-gray-900 rounded-[2.5rem] p-4 shadow-2xl">
@@ -136,7 +139,6 @@
 							</div>
 						</div>
 						
-						<!-- Glow effect -->
 						<div class="absolute -inset-4 bg-green-400/20 rounded-[3rem] blur-xl"></div>
 					</div>
 				</div>
@@ -150,6 +152,43 @@
 				</p>
 			</div>
 			<GradientControl section-id="streaks" />
+		</section>
+		-->
+
+			<!-- Humanity Section -->
+			<section class="relative py-32 overflow-hidden">
+			<!-- Cinematic full-width lifestyle photo -->
+			<div class="absolute inset-0 bg-gradient-to-r from-amber-600 via-orange-500 to-yellow-600">
+				<div class="absolute inset-0 bg-black/40"></div>
+				<!-- Small business owner with customers scene -->
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 opacity-30">
+						<div class="space-y-4">
+							<div class="w-full h-32 bg-white/20 rounded-lg backdrop-blur-sm"></div>
+							<div class="w-3/4 h-24 bg-white/15 rounded-lg backdrop-blur-sm"></div>
+						</div>
+						<div class="space-y-4">
+							<div class="w-full h-40 bg-white/25 rounded-lg backdrop-blur-sm"></div>
+							<div class="w-1/2 h-16 bg-white/15 rounded-lg backdrop-blur-sm"></div>
+						</div>
+						<div class="space-y-4">
+							<div class="w-full h-28 bg-white/20 rounded-lg backdrop-blur-sm"></div>
+							<div class="w-4/5 h-20 bg-white/15 rounded-lg backdrop-blur-sm"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+				<h2 class="text-4xl md:text-6xl font-bold mb-8">
+					Real people. Real stories.
+				</h2>
+				<p class="text-xl md:text-2xl opacity-90 leading-relaxed">
+					Your humanity is what connects with people. 
+					Consystnt just makes sure the world sees it.
+				</p>
+			</div>
+			<GradientControl section-id="humanity" />
 		</section>
 
 		<!-- Community Section -->
@@ -233,41 +272,7 @@
 			<GradientControl section-id="community" />
 		</section>
 
-		<!-- Humanity Section -->
-		<section class="relative py-32 overflow-hidden">
-			<!-- Cinematic full-width lifestyle photo -->
-			<div class="absolute inset-0 bg-gradient-to-r from-amber-600 via-orange-500 to-yellow-600">
-				<div class="absolute inset-0 bg-black/40"></div>
-				<!-- Small business owner with customers scene -->
-				<div class="absolute inset-0 flex items-center justify-center">
-					<div class="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 opacity-30">
-						<div class="space-y-4">
-							<div class="w-full h-32 bg-white/20 rounded-lg backdrop-blur-sm"></div>
-							<div class="w-3/4 h-24 bg-white/15 rounded-lg backdrop-blur-sm"></div>
-						</div>
-						<div class="space-y-4">
-							<div class="w-full h-40 bg-white/25 rounded-lg backdrop-blur-sm"></div>
-							<div class="w-1/2 h-16 bg-white/15 rounded-lg backdrop-blur-sm"></div>
-						</div>
-						<div class="space-y-4">
-							<div class="w-full h-28 bg-white/20 rounded-lg backdrop-blur-sm"></div>
-							<div class="w-4/5 h-20 bg-white/15 rounded-lg backdrop-blur-sm"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-				<h2 class="text-4xl md:text-6xl font-bold mb-8">
-					Real people. Real stories.
-				</h2>
-				<p class="text-xl md:text-2xl opacity-90 leading-relaxed">
-					Your humanity is what connects with people. 
-					Consystnt just makes sure the world sees it.
-				</p>
-			</div>
-			<GradientControl section-id="humanity" />
-		</section>
+	
 
 		<!-- AI Support Section -->
 		<section class="bg-gray-900 py-20">
@@ -277,8 +282,7 @@
 						AI that supports, not replaces.
 					</h2>
 					<p class="text-xl opacity-80 max-w-4xl mx-auto">
-						Plan, curate, and direct with AI coaching — but always keep 
-						your human voice at the center.
+						An extensive intake captures your goals and voice. Our AI coaching translates it into clear, actionable steps for growth — with the option to generate AI content for your feed or have the AI coach you through creating and posting, keeping your humanity at the core.
 					</p>
 				</div>
 				
@@ -376,12 +380,11 @@
 			
 			<div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
 				<h2 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-					Focus on your work.<br>
-					Consystnt keeps you accountable.
+					 Your shortcut to social momentum and brand visibility.<br/>Get Consystnt. 
 				</h2>
 				
 				<button class="bg-white text-gray-900 px-16 py-5 rounded-full text-xl font-semibold hover:bg-gray-100 transition-colors">
-					Get Started Free
+					Start Now
 				</button>
 			</div>
 			<GradientControl section-id="closing" />
@@ -391,11 +394,13 @@
 
 <script>
 import GradientControl from '@/components/GradientControl.vue'
+import BusinessBenefitsSection from '@/components/human/BusinessBenefitsSection.vue'
 
 export default {
 	name: 'Human',
 	components: {
-		GradientControl
+		GradientControl,
+		BusinessBenefitsSection
 	},
 	data() {
 		return {
