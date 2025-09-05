@@ -2,20 +2,19 @@
 	<div>
 		<!-- Hero Section -->
 		<section class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-			<!-- Rotating Background Images -->
-			<div class="absolute inset-0">
-				<div class="absolute inset-0 transition-opacity duration-1000" 
-					 :class="{ 'opacity-100': currentImage === 0, 'opacity-0': currentImage !== 0 }">
-					<!-- Coffee shop owner serving customers -->
-				
-				</div>
+			<!-- Fullscreen Background Video -->
+			<div class="hero-video-container">
+				<video class="hero-video" autoplay muted loop playsinline>
+					<source :src="selectedVideo" type="video/mp4">
+				</video>
 			</div>
+			<div class="hero-video-overlay" :style="{ opacity: videoOverlayOpacity }"></div>
 			
 			<div class="header-holder">
 				<h1 class="main-header">
 					<!-- You're doing great things —<br> -->
 					You're doing great things in your business — <br></br> 
-					Consystnt helps you share your story with others.
+					<b>Consystnt helps you share your story with others.</b>
 				</h1>
 				<p class="header-subhead">
 					AI-powered accountability and coaching turns your brand's story into lasting growth on social media — without the overthinking.
@@ -24,7 +23,6 @@
 					Get Started
 				</button>
 			</div>
-			<GradientControl section-id="hero" />
 		</section>
 
 		<!-- Accountability Section -->
@@ -73,7 +71,6 @@
 					</div>
 				</div>
 			</div>
-			<GradientControl section-id="accountability" />
 		</section>
 
 		<!-- Business Stories Section -->
@@ -166,7 +163,6 @@ Take the first step now. The rest unlock when you’re ready.
 					</div>
 				</div>
 			</div>
-			<GradientControl section-id="ai-support" />
 		</section>
 
 		<!-- Closing CTA -->
@@ -218,25 +214,51 @@ export default {
 	},
 	data() {
 		return {
-			currentImage: 0,
-			images: [
-				'coffee-shop',
-				'fitness-coach', 
-				'designer',
-				'chef'
+			selectedVideo: '',
+			videoOverlayOpacity: 0.6,
+			videoSources: [
+				'/videos/u5562559549_Mid-40s_woman_arranging_flowers_in_her_small_bout_2d7d6adb-1b38-409d-853c-d5311cf5be92_2.mp4',
+				'/videos/u5562559549_Mid-40s_female_entrepreneur_hosting_a_mastermind__1f3935a3-32cf-41fa-9d01-4080d897d5c1_3.mp4',
+				'/videos/u5562559549_Mid-50s_female_wellness_instructor_leading_a_yoga_5753eeff-7c52-457d-9f49-97a46fe7dee4_2.mp4',
+				'/videos/u5562559549_Mid-50s_female_wellness_instructor_leading_a_yoga_3779c0c5-f1f4-4170-bbc7-8f1312b187b2_0.mp4'
 			]
 		}
 	},
 	mounted() {
-		// Rotate hero background images
-		setInterval(() => {
-			this.currentImage = (this.currentImage + 1) % this.images.length
-		}, 4000)
+		const index = Math.floor(Math.random() * this.videoSources.length)
+		this.selectedVideo = this.videoSources[index]
 	}
 }
 </script>
 
 <style scoped>
+
+.hero-video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.hero-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero-video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1;
+	pointer-events: none;
+}
 
 .story-holder {
 	display: flex;
@@ -251,10 +273,12 @@ export default {
 	align-items: center;
 	gap: 25px;
 	max-width: 550px;
+	position: relative;
+	z-index: 2;
 }
 
 .main-header {
-	font-size: 44px;
+	font-size: 40px;
 	line-height: 1.1;
 	font-weight: 500;
 	letter-spacing: -0.015em;
@@ -276,7 +300,8 @@ export default {
 }
 
 .header-subhead {
-	font-size: 17px;
+	font-size: 18px;
+	letter-spacing: -.03em;
 }
 
 
