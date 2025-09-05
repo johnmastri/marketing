@@ -23,21 +23,11 @@
 						v-for="(line, index) in selectedStory.narrative"
 						:key="index"
 						class="narrative-line"
-						:class="{ 
-							'revealed': index < narrativeProgress,
-							'current': index === narrativeProgress
-						}"
 					>
 						{{ line }}
 					</div>
 				</div>
 
-				<div 
-					v-if="narrativeComplete"
-					class="continue-scrolling"
-				>
-					<p>✓ Story complete - continue scrolling or select another story above</p>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -46,6 +36,7 @@
 <script>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { markRaw } from 'vue'
 import { useBusinessStoriesStore } from '../../stores/businessStories.js'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -64,7 +55,10 @@ export default {
 			centerCheckHandler: null,
 			resizeHandler: null,
 			st: null,
-			tl: null
+			tl: null,
+			lastProgressIndex: 0,
+			rAFHandle: 0,
+			_pendingIdx: 0
 		}
 	},
 	computed: {
@@ -95,6 +89,7 @@ export default {
 	beforeUnmount() {
 		if (this.st) { this.st.kill(); this.st = null }
 		if (this.tl) { this.tl.kill(); this.tl = null }
+		if (this.rAFHandle) { cancelAnimationFrame(this.rAFHandle); this.rAFHandle = 0 }
 	},
 	methods: {
 		initScrollTrigger() {
@@ -104,15 +99,16 @@ export default {
 			const triggerEl = this.$refs.narrativeCard
 			const sectionEl = this.$el.closest('section') || this.$el
 			const totalLines = this.selectedStory.narrative.length
-			const initial = Math.max(0, this.narrativeProgress)
+			const initial = 0
 			const linesToReveal = Math.max(0, totalLines - initial)
-			const endDistance = () => {
-				const vh = window.innerHeight || 800
-				return `+=${Math.max(1, linesToReveal) * Math.round(vh * 0.2)}`
-			}
 			// Prepare elements
 			const contentEl = this.$refs.narrativeContent
 			const lineEls = contentEl ? Array.from(contentEl.querySelectorAll('.narrative-line')) : []
+			const endDistance = () => {
+				const sampleLine = lineEls[0]
+				const perLinePx = sampleLine ? Math.max(200, Math.round(sampleLine.getBoundingClientRect().height * 6)) : Math.round((window.innerHeight || 800) * 0.3)
+				return `+=${Math.max(1, linesToReveal) * perLinePx}`
+			}
 			// Set initial visibility states based on existing progress
 			lineEls.forEach((el, idx) => {
 				if (idx < initial) {
@@ -121,35 +117,25 @@ export default {
 					gsap.set(el, { opacity: 0, y: 20 })
 				}
 			})
-			// Build timeline spanning the entire scroll
-			this.tl = gsap.timeline({
-				defaults: { ease: 'power1.out' },
-				scrollTrigger: {
-					trigger: triggerEl,
-					start: 'center center',
-					end: endDistance,
-					pin: sectionEl,
-					pinSpacing: true,
-					anticipatePin: 1,
-					scrub: true,
-					onUpdate: (self) => {
-						const progress = self.progress
-						const exact = initial + progress * linesToReveal
-						const target = Math.floor(Math.min(totalLines, Math.max(0, exact)))
-						this.store.setNarrativeProgress(this.selectedStory.id, target)
-					}
-				}
-			})
-			if (linesToReveal > 0) {
-				const durationPer = 1 / linesToReveal
-				for (let i = initial; i < totalLines; i++) {
-					const el = lineEls[i]
-					const pos = (i - initial) * durationPer
-					this.tl.fromTo(el, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: durationPer }, pos)
-				}
+			this.lastProgressIndex = initial
+			// Build a GSAP timeline with one step per line
+			this.tl = markRaw(gsap.timeline({ defaults: { ease: 'power1.out' } }))
+			for (let i = initial; i < totalLines; i++) {
+				const el = lineEls[i]
+				this.tl.fromTo(el, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 1, immediateRender: false }, i === initial ? 0 : '>' )
 			}
-			// Keep a handle to the internal ScrollTrigger
-			this.st = this.tl.scrollTrigger
+			// Tie scroll to the timeline progress
+			this.st = markRaw(ScrollTrigger.create({
+				trigger: triggerEl,
+				start: 'center center',
+				end: endDistance,
+				pin: sectionEl,
+				pinSpacing: true,
+				anticipatePin: 1,
+				scrub: true,
+				invalidateOnRefresh: true,
+				animation: this.tl
+			}))
 		},
 		selectStory(storyId) {
 			// Reset narrative progress for the new story
@@ -264,8 +250,8 @@ export default {
 	border-radius: 2rem;
 	padding: 2rem;
 	border: 1px solid rgba(75, 85, 99, 0.3);
-	max-height: 80vh;
-	overflow-y: auto;
+	max-height: none;
+	overflow: visible;
 	position: relative;
 }
 
@@ -287,12 +273,10 @@ export default {
 	transform: translateY(20px);
 	transition: none;
 	line-height: 1.3;
+	will-change: transform, opacity;
 }
 
-.narrative-line.revealed {
-	opacity: 1;
-	transform: translateY(0);
-}
+/* removed .narrative-line.revealed to avoid empty ruleset */
 
 .narrative-line.current {
 	color: #10b981;
@@ -371,7 +355,8 @@ export default {
 	
 	.narrative-card {
 		padding: 1.5rem;
-		max-height: 75vh;
+		max-height: none;
+		overflow: visible;
 	}
 	
 	.narrative-line {
@@ -397,7 +382,8 @@ export default {
 	.narrative-card {
 		padding: 1rem;
 		border-radius: 1.5rem;
-		max-height: 70vh;
+		max-height: none;
+		overflow: visible;
 	}
 	
 	.narrative-line {

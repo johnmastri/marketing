@@ -14,7 +14,7 @@
 			<div class="header-holder">
 				<h1 class="main-header">
 					<!-- You're doing great things —<br> -->
-					 You're doing great things in your business — <br></br> 
+					You're doing great things in your business — <br></br> 
 					Consystnt helps you share your story with others.
 				</h1>
 				<p class="header-subhead">
@@ -28,7 +28,7 @@
 		</section>
 
 		<!-- Accountability Section -->
-		<section class="bg-white py-20">
+		<section class="bg-white py-20 min-h-screen story-holder">
 			<div class="max-w-7xl mx-auto px-6">
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 					<!-- Left: Ultra-realistic image -->
@@ -50,14 +50,14 @@
 					
 					<!-- Right: Copy -->
 					<div class="space-y-8">
-						<h2 class="text-4xl md:text-5xl font-bold text-gray-900">
-							You have enough to think about.
-						</h2>
-						<p class="text-xl text-gray-600 leading-relaxed">
-							Consystnt takes the guesswork out of being seen by the right people with sustom prompts that guide what to post, when to post, and how to connect with your audience — less thinking, more connecting.
+						<div class="main-header accountability">
+							Seriously, you have enough to think about.
+						</div>
+						<p class="header-subhead black">
+							Consystnt <b>takes the guesswork out of being seen</b> by the right people with actionable prompts that guide what to post, when to post, and how to connect with your audience.
 						</p>
-						<p class="text-xl text-gray-600 leading-relaxed">
-						The truth is your voice is the missing piece of your marketing
+						<p class="header-subhead black bold">
+						The truth is <span style="font-style:italic">your voice</span> is the missing piece of your marketing.
 					</p>
 						<ul class="bullets">
 							<li><strong>Know exactly what to post</strong> - tailored prompts designed for your brand and audience.</li>
@@ -65,11 +65,11 @@
 							<li><strong>Build real engagement</strong> - guidance on how to interact and grow your audience authentically.</li>
 							<li><strong>Reduce overwhelm</strong> - focus on your work while Consystnt keeps your social presence active.</li>
 						</ul>
-						<!-- <div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
+						<div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
 							<p class="text-lg font-medium text-purple-900">
-								Less thinking, more connecting.
+								The goal: less thinking, more connecting.
 							</p>
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -77,8 +77,8 @@
 		</section>
 
 		<!-- Business Stories Section -->
-		<section class="bg-black h-screen overflow-hidden flex items-center">
-			<div class="max-w-7xl mx-auto px-6">
+		<section class="bg-black min-h-screen story-holder">
+			<div class="story-holder">
 				<h2 class="text-4xl font-bold text-white text-center mb-8">
 					You already know your stuff. Now it's time to get consistent.
 				</h2>
@@ -86,63 +86,7 @@
 			</div>
 		</section>
 
-		<!-- Streaks Section (Disabled) -->
-		<!-- 
-		<section class="bg-black py-20">
-			<div class="max-w-4xl mx-auto text-center px-6">
-				<div class="flex justify-center mb-12">
-					<div class="relative">
-						<div class="w-64 h-96 bg-gray-900 rounded-[2.5rem] p-4 shadow-2xl">
-							<div class="w-full h-full bg-gradient-to-b from-gray-800 to-black rounded-[2rem] p-6 text-white">
-								<div class="text-center">
-									<div class="text-6xl font-bold text-green-400 mb-4">27</div>
-									<div class="text-lg mb-2">Day Streak</div>
-									<div class="text-sm opacity-70 mb-8">Keep it going!</div>
-									
-									<div class="space-y-3">
-										<div class="flex items-center justify-between bg-gray-800 p-3 rounded-lg">
-											<span class="text-sm">Daily Post</span>
-											<div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-												<span class="text-xs">✓</span>
-											</div>
-										</div>
-										<div class="flex items-center justify-between bg-gray-800 p-3 rounded-lg">
-											<span class="text-sm">Engage with Community</span>
-											<div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-												<span class="text-xs">✓</span>
-											</div>
-										</div>
-										<div class="flex items-center justify-between bg-gray-700 p-3 rounded-lg opacity-50">
-											<span class="text-sm">Story Update</span>
-											<div class="w-6 h-6 bg-gray-600 rounded-full"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="absolute -inset-4 bg-green-400/20 rounded-[3rem] blur-xl"></div>
-					</div>
-				</div>
-				
-				<h2 class="text-4xl md:text-6xl font-bold text-white mb-8">
-					Build your streaks. Grow your influence.
-				</h2>
-				<p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-					Every completed action adds to your streak, creating visible proof 
-					of your commitment — and momentum your audience can feel.
-				</p>
-			</div>
-			<GradientControl section-id="streaks" />
-		</section>
-		-->
-
-		
-
-		<!-- Spotlight Carousel -->
 		<SpotlightCarousel />
-
-	
 
 		<!-- AI Support Section -->
 		<section class="bg-gray-900 py-20">
@@ -247,7 +191,7 @@ Take the first step now. The rest unlock when you’re ready.
 			
 			<div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
 				<h2 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-					 The fastest way to grow your audience and stay consistent. 
+					 The fastest way to grow your audience - consistently. 
 					 <!--"The fastest way to grow your audience and stay consistent. Get Consystnt. -->
 				</h2>
 				
@@ -294,24 +238,47 @@ export default {
 
 <style scoped>
 
+.story-holder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 .header-holder {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
-}
-
-.header-subhead {
-	font-size: 20px;
+	gap: 25px;
+	max-width: 550px;
 }
 
 .main-header {
-	font-size: 38px;
+	font-size: 44px;
 	line-height: 1.1;
 	font-weight: 500;
 	letter-spacing: -0.015em;
 }
+
+.accountability {
+	color: black;
+	font-weight: 600;
+	letter-spacing: -.03em;
+}
+
+.black {
+	color: black;
+}
+
+.bold {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.header-subhead {
+	font-size: 17px;
+}
+
 
 .get-started-button {
 	color: black;
