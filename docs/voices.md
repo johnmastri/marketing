@@ -103,4 +103,27 @@ that sound like guidance, not sales.
 
 No clichés.  
 No templates.  
+Just you — made visible.
+
+
+Educators & Experts
+Course creators, tutors, thought leaders
+
+You already know how to teach.  
+But sharing online can feel reductive.  
+
+Not because you lack authority.  
+Because depth doesn't fit into a template.  
+
+Consystnt listens first.  
+It learns how you explain ideas,  
+how you break things down,  
+how you make complex subjects clear.  
+
+Then it turns that into prompts  
+that showcase your expertise  
+without losing your voice.  
+
+No dumbing down.  
+No templates.  
 Just you — made visible.  

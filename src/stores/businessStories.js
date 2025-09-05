@@ -7,226 +7,138 @@ export const useBusinessStoriesStore = defineStore('businessStories', {
 				id: 'coaches',
 				title: 'Coaches & Guides',
 				subtitle: 'Business coaches, life coaches, fitness trainers',
-				strengths: [
-					'Transform people\'s lives every day',
-					'Deep expertise that really makes a difference',
-					'See real breakthroughs and growth in clients'
-				],
-				struggles: [
-					'Feels salesy to post online',
-					'What if people think I\'m pushy?',
-					'Don\'t want to sound like every other coach'
-				],
-				solutionTitle: 'What you could be sharing instead:',
-				solutions: [
-					{
-						name: 'Monday Motivation',
-						description: 'Share ONE insight from your weekend that changed your thinking'
-					},
-					{
-						name: 'Story Time',
-						description: 'Tell about a client breakthrough (anonymously) in 2-3 sentences'
-					},
-					{
-						name: 'Quick Tip Tuesday',
-						description: 'One actionable tip they can use today (30 seconds to read)'
-					},
-					{
-						name: 'What I\'m Learning',
-						description: 'Share a mistake you made and what you learned from it'
-					}
-				],
-				insight: '"Wait... I actually DO have interesting things to share. I just never thought people would want to hear about the process behind the results."'
+				narrative: [
+					'You already know how to guide transformation.',
+					'But sharing it can feel forced.',
+					'Not because you lack insight.',
+					'Because every coach is different.',
+					'And your voice shouldn\'t sound like anyone else\'s.',
+					'Consystnt listens first.',
+					'It learns the way you speak, the way you teach,',
+					'and the way your clients experience growth.',
+					'Then it turns that into prompts',
+					'that feel as natural as conversation.',
+					'No scripts.',
+					'No templates.',
+					'Just you — made visible.'
+				]
 			},
 			{
 				id: 'local',
 				title: 'Local Businesses',
 				subtitle: 'Coffee shops, salons, boutiques, restaurants',
-				strengths: [
-					'Serve your community every day',
-					'Build real relationships with customers',
-					'Create gathering spaces people love'
-				],
-				struggles: [
-					'Don\'t know what\'s worth posting about',
-					'Instagram isn\'t for businesses like mine',
-					'My daily routine seems boring'
-				],
-				solutionTitle: 'Your community wants to see:',
-				solutions: [
-					{
-						name: 'Opening Day',
-						description: 'Quick video of you unlocking doors, turning on lights'
-					},
-					{
-						name: 'Regular\'s Story',
-						description: '"Mrs. Johnson has ordered the same thing for 3 years..."'
-					},
-					{
-						name: 'Team Spotlight',
-						description: 'Introduce who makes your business special'
-					},
-					{
-						name: 'Small Wins',
-						description: 'First customer of the day, busy lunch rush, closing time relief'
-					}
-				],
-				insight: '"Oh! I didn\'t realize people would find our daily routine interesting. Maybe social media isn\'t just for big brands after all..."'
+				narrative: [
+					'You already know how to serve your community.',
+					'But showing up online feels unnatural.',
+					'Not because you lack stories.',
+					'Because your story isn\'t like anyone else\'s.',
+					'Consystnt listens first.',
+					'It learns the way you talk about your work,',
+					'your customers, your neighborhood.',
+					'Then it turns that into prompts',
+					'that sound like you — not like an ad.',
+					'No gimmicks.',
+					'No templates.',
+					'Just you — made visible.'
+				]
 			},
 			{
 				id: 'creative',
-				title: 'Creative Professionals',
+				title: 'Creatives & Artists',
 				subtitle: 'Designers, writers, photographers, musicians',
-				strengths: [
-					'Create beautiful, meaningful work',
-					'Have unique artistic vision',
-					'Solve problems through creativity'
-				],
-				struggles: [
-					'My work speaks for itself, right?',
-					'Feels weird promoting myself',
-					'Don\'t want to seem desperate for attention'
-				],
-				solutionTitle: 'People love seeing the process:',
-				solutions: [
-					{
-						name: 'Time Lapse Tuesday',
-						description: 'Speed up your work process (even 30 seconds is gold)'
-					},
-					{
-						name: 'Decision Points',
-						description: 'Show 2-3 options and ask "which direction should I go?"'
-					},
-					{
-						name: 'Inspiration Source',
-						description: 'What you\'re looking at/reading/listening to while you work'
-					},
-					{
-						name: 'Failed Attempts',
-						description: 'Show what didn\'t work (surprisingly engaging!)'
-					}
-				],
-				insight: '"I always thought I needed to wait until something was \'perfect\' to share it. Turns out people are more interested in how I get there than the final result."'
+				narrative: [
+					'You already know how to create.',
+					'But sharing your process feels exposed.',
+					'Not because you lack vision.',
+					'Because every artist is different.',
+					'Consystnt listens first.',
+					'It learns your tone, your rhythm,',
+					'the way you see the world.',
+					'Then it turns that into prompts',
+					'that reflect your practice, your voice.',
+					'No formulas.',
+					'No templates.',
+					'Just you — made visible.'
+				]
 			},
 			{
 				id: 'health',
 				title: 'Health & Wellness',
 				subtitle: 'Therapists, nutritionists, yoga instructors',
-				strengths: [
-					'Help people heal and grow',
-					'See real transformations daily',
-					'Create safe, supportive environments'
-				],
-				struggles: [
-					'Privacy concerns posting client info',
-					'Don\'t want to seem like I\'m promising miracles',
-					'Health advice can be sensitive'
-				],
-				solutionTitle: 'Share the journey, not the destination:',
-				solutions: [
-					{
-						name: 'Mindful Monday',
-						description: 'One small wellness tip that changed your own life'
-					},
-					{
-						name: 'Progress Patterns',
-						description: 'What you notice about healing (no client specifics)'
-					},
-					{
-						name: 'Tool Tuesday',
-						description: 'Share a technique, book, or resource you recommend'
-					},
-					{
-						name: 'Why I Do This',
-						description: 'Your personal wellness journey and motivation'
-					}
-				],
-				insight: '"I can share my expertise without compromising anyone\'s privacy. My own journey and insights are actually really valuable content."'
+				narrative: [
+					'You already know how to care for others.',
+					'But posting about it can feel self-promotional.',
+					'Not because you lack knowledge.',
+					'Because your approach is uniquely yours.',
+					'Consystnt listens first.',
+					'It learns how you talk about health,',
+					'habits, balance, and change.',
+					'Then it turns that into prompts',
+					'that guide with compassion, not pressure.',
+					'No noise.',
+					'No templates.',
+					'Just you — made visible.'
+				]
 			},
 			{
 				id: 'finance',
 				title: 'Real Estate & Finance',
 				subtitle: 'Realtors, mortgage brokers, financial advisors',
-				strengths: [
-					'Guide major life decisions',
-					'Build trust through expertise',
-					'Navigate complex processes for clients'
-				],
-				struggles: [
-					'Compliance rules make me nervous',
-					'Market updates are boring',
-					'People think I\'m always selling'
-				],
-				solutionTitle: 'Make complex topics accessible:',
-				solutions: [
-					{
-						name: 'First-Time Buyer Friday',
-						description: 'Demystify one part of the process each week'
-					},
-					{
-						name: 'Market Monday',
-						description: 'Translate data into what it means for real people'
-					},
-					{
-						name: 'Myth Busting',
-						description: 'Address common misconceptions you hear daily'
-					},
-					{
-						name: 'Behind the Scenes',
-						description: 'Show the human side of transactions'
-					}
-				],
-				insight: '"People need someone to translate all this complexity into plain English. That\'s actually incredibly valuable content."'
+				narrative: [
+					'You already know how to find people homes.',
+					'But posting about it can feel like bragging.',
+					'Not because you lack value.',
+					'Because every agent is different.',
+					'Consystnt listens first.',
+					'It learns how you speak about community,',
+					'about trust, about belonging.',
+					'Then it turns that into prompts',
+					'that sound like guidance, not sales.',
+					'No clichés.',
+					'No templates.',
+					'Just you — made visible.'
+				]
 			},
 			{
 				id: 'educators',
 				title: 'Educators & Experts',
 				subtitle: 'Course creators, tutors, thought leaders',
-				strengths: [
-					'Share knowledge that matters',
-					'Change how people think',
-					'Break down complex concepts'
-				],
-				struggles: [
-					'Sounds pretentious to post about my expertise',
-					'Who am I to give advice?',
-					'Don\'t want to seem like a know-it-all'
-				],
-				solutionTitle: 'Your curiosity is contagious:',
-				solutions: [
-					{
-						name: 'What I\'m Reading',
-						description: 'Share insights from books/articles that excited you'
-					},
-					{
-						name: 'Question of the Day',
-						description: 'Ask something that made you think differently'
-					},
-					{
-						name: 'Simple Explanation',
-						description: 'Break down complex ideas into everyday language'
-					},
-					{
-						name: 'Learning in Public',
-						description: 'Share when you change your mind about something'
-					}
-				],
-				insight: '"I don\'t have to position myself as the ultimate authority. I can just share what genuinely interests me and let people learn alongside me."'
+				narrative: [
+					'You already know how to teach.',
+					'But sharing online can feel reductive.',
+					'Not because you lack authority.',
+					'Because depth doesn\'t fit into a template.',
+					'Consystnt listens first.',
+					'It learns how you explain ideas,',
+					'how you break things down,',
+					'how you make complex subjects clear.',
+					'Then it turns that into prompts',
+					'that showcase your expertise',
+					'without losing your voice.',
+					'No dumbing down.',
+					'No templates.',
+					'Just you — made visible.'
+				]
 			}
 		],
 		
 		config: {
-			wheelDebounce: 50,
-			transitionDuration: 800,
-			solutionDelay: 400,
-			enableProgressBar: true,
+			carouselWidth: 90, // 90% width for wider cards
+			scrollTriggerOffset: 100, // px to trigger next line
+			lineRevealDelay: 300, // ms between line reveals
+			transitionDuration: 600,
 			enableScrollHint: true,
-			touchSensitivity: 50
+			touchSensitivity: 50,
+			initialVisibleLines: 2
 		},
 		
 		currentStoryIndex: 0,
-		solutionStates: [false, false, false, false, false, false],
+		selectedStoryId: null,
+		narrativeProgress: {}, // Track progress for each story
+		isNarrativeMode: false,
 		isLocked: false,
+		// Legacy compatibility
+		solutionStates: [false, false, false, false, false, false],
 		completedStories: [],
 		finalMessage: {
 			title: 'Stop overthinking what to post. Start sharing who you already are.',
@@ -235,8 +147,8 @@ export const useBusinessStoriesStore = defineStore('businessStories', {
 	}),
 
 	getters: {
-		getStory: (state) => (index) => {
-			return state.stories[index] || null
+		getStory: (state) => (id) => {
+			return state.stories.find(story => story.id === id) || null
 		},
 		
 		getAllStories: (state) => state.stories,
@@ -245,19 +157,27 @@ export const useBusinessStoriesStore = defineStore('businessStories', {
 			return state.stories[state.currentStoryIndex] || null
 		},
 		
-		getProgressPercent: (state) => {
-			const totalSteps = (state.stories.length * 2) + 1 // Each story has problem + solution + final
-			let currentStep = state.currentStoryIndex * 2
-			
-			// Add solution states
-			for (let i = 0; i <= state.currentStoryIndex && i < state.solutionStates.length; i++) {
-				if (state.solutionStates[i]) currentStep++
-			}
-			
-			return Math.min(100, (currentStep / totalSteps) * 100)
+		getSelectedStory: (state) => {
+			return state.selectedStoryId ? 
+				state.stories.find(s => s.id === state.selectedStoryId) : 
+				null
+		},
+		
+		getNarrativeProgress: (state) => (storyId) => {
+			return state.narrativeProgress[storyId] || 0
 		},
 		
 		totalStories: (state) => state.stories.length,
+		
+		// Legacy compatibility getters
+		getProgressPercent: (state) => {
+			const totalSteps = (state.stories.length * 2) + 1
+			let currentStep = state.currentStoryIndex * 2
+			for (let i = 0; i <= state.currentStoryIndex && i < state.solutionStates.length; i++) {
+				if (state.solutionStates[i]) currentStep++
+			}
+			return Math.min(100, (currentStep / totalSteps) * 100)
+		},
 		
 		isStoryComplete: (state) => (index) => {
 			return state.completedStories.includes(index)
@@ -269,6 +189,48 @@ export const useBusinessStoriesStore = defineStore('businessStories', {
 	},
 
 	actions: {
+		// Narrative mode actions
+		selectStory(storyId) {
+			this.selectedStoryId = storyId
+			this.isNarrativeMode = true
+			if (typeof this.narrativeProgress[storyId] !== 'number') {
+				this.narrativeProgress[storyId] = Math.max(0, this.config.initialVisibleLines || 0)
+			}
+		},
+		
+		advanceNarrative(storyId, lineIndex) {
+			if (!this.narrativeProgress[storyId]) {
+				this.narrativeProgress[storyId] = 0
+			}
+			this.narrativeProgress[storyId] = Math.max(
+				this.narrativeProgress[storyId], 
+				lineIndex + 1
+			)
+		},
+
+		// Set absolute narrative progress (supports decreasing on scroll up)
+		setNarrativeProgress(storyId, value) {
+			if (!storyId) return
+			const story = this.getStory(storyId)
+			const max = story ? story.narrative.length : 0
+			const clamped = Math.max(0, Math.min(max, value))
+			this.narrativeProgress[storyId] = clamped
+		},
+		
+		resetNarrative(storyId) {
+			if (storyId) {
+				this.narrativeProgress[storyId] = Math.max(0, this.config.initialVisibleLines || 0)
+			} else {
+				this.narrativeProgress = {}
+			}
+		},
+		
+		exitNarrativeMode() {
+			this.isNarrativeMode = false
+			this.selectedStoryId = null
+		},
+		
+		// Legacy compatibility actions
 		setCurrentStory(index) {
 			if (index >= 0 && index <= this.stories.length) {
 				this.currentStoryIndex = index
@@ -304,41 +266,15 @@ export const useBusinessStoriesStore = defineStore('businessStories', {
 			this.solutionStates = [false, false, false, false, false, false]
 			this.completedStories = []
 			this.isLocked = false
+			this.narrativeProgress = {}
 		},
 		
 		setLocked(locked) {
 			this.isLocked = locked
 		},
 		
-		updateStoryContent(storyId, updates) {
-			const index = this.stories.findIndex(s => s.id === storyId)
-			if (index !== -1) {
-				this.stories[index] = { ...this.stories[index], ...updates }
-			}
-		},
-		
 		updateConfig(newConfig) {
 			this.config = { ...this.config, ...newConfig }
-		},
-		
-		resetDefaults() {
-			this.config = {
-				wheelDebounce: 50,
-				transitionDuration: 800,
-				solutionDelay: 400,
-				enableProgressBar: true,
-				enableScrollHint: true,
-				touchSensitivity: 50
-			}
-		},
-		
-		// Future methods for dynamic content
-		loadCustomStories(userType) {
-			// Could load different story sets based on user business type
-		},
-		
-		enableABTestVariant(variantName) {
-			// Could swap in different story content for testing
 		}
 	}
 })

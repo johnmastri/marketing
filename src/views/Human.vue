@@ -7,54 +7,20 @@
 				<div class="absolute inset-0 transition-opacity duration-1000" 
 					 :class="{ 'opacity-100': currentImage === 0, 'opacity-0': currentImage !== 0 }">
 					<!-- Coffee shop owner serving customers -->
-					<div class="w-full h-full bg-gradient-to-br from-amber-800 via-orange-600 to-yellow-700 relative">
-						<div class="absolute inset-0 bg-black/30"></div>
-						<div class="absolute bottom-1/3 left-1/4 w-16 h-16 bg-white/20 rounded-full backdrop-blur-sm"></div>
-						<div class="absolute top-1/4 right-1/3 w-12 h-12 bg-amber-200/30 rounded-lg backdrop-blur-sm"></div>
-						<div class="absolute center w-20 h-20 bg-orange-300/20 rounded-full backdrop-blur-sm"></div>
-					</div>
-				</div>
-				<div class="absolute inset-0 transition-opacity duration-1000" 
-					 :class="{ 'opacity-100': currentImage === 1, 'opacity-0': currentImage !== 1 }">
-					<!-- Fitness coach filming story -->
-					<div class="w-full h-full bg-gradient-to-br from-blue-800 via-teal-600 to-green-700 relative">
-						<div class="absolute inset-0 bg-black/30"></div>
-						<div class="absolute top-1/4 left-1/3 w-8 h-20 bg-white/20 rounded-full backdrop-blur-sm"></div>
-						<div class="absolute bottom-1/3 right-1/4 w-14 h-14 bg-teal-200/30 rounded-lg backdrop-blur-sm"></div>
-						<div class="absolute center w-24 h-16 bg-green-300/20 rounded-lg backdrop-blur-sm"></div>
-					</div>
-				</div>
-				<div class="absolute inset-0 transition-opacity duration-1000" 
-					 :class="{ 'opacity-100': currentImage === 2, 'opacity-0': currentImage !== 2 }">
-					<!-- Designer adjusting garment -->
-					<div class="w-full h-full bg-gradient-to-br from-purple-800 via-pink-600 to-rose-700 relative">
-						<div class="absolute inset-0 bg-black/30"></div>
-						<div class="absolute top-1/3 left-1/4 w-10 h-24 bg-white/20 rounded-lg backdrop-blur-sm"></div>
-						<div class="absolute bottom-1/4 center w-18 h-18 bg-pink-200/30 rounded-full backdrop-blur-sm"></div>
-						<div class="absolute top-1/2 right-1/3 w-12 h-8 bg-rose-300/20 rounded-lg backdrop-blur-sm"></div>
-					</div>
-				</div>
-				<div class="absolute inset-0 transition-opacity duration-1000" 
-					 :class="{ 'opacity-100': currentImage === 3, 'opacity-0': currentImage !== 3 }">
-					<!-- Chef plating dish -->
-					<div class="w-full h-full bg-gradient-to-br from-red-800 via-orange-600 to-yellow-600 relative">
-						<div class="absolute inset-0 bg-black/30"></div>
-						<div class="absolute bottom-1/4 left-1/3 w-20 h-4 bg-white/20 rounded-full backdrop-blur-sm"></div>
-						<div class="absolute top-1/3 right-1/4 w-16 h-16 bg-orange-200/30 rounded-full backdrop-blur-sm"></div>
-						<div class="absolute center w-12 h-12 bg-yellow-300/20 rounded-lg backdrop-blur-sm"></div>
-					</div>
+				
 				</div>
 			</div>
 			
-			<div class="relative z-10 text-center max-w-5xl mx-auto px-6">
-				<h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-					You're doing great things —<br>
-					consistently share your story with others.
+			<div class="header-holder">
+				<h1 class="main-header">
+					<!-- You're doing great things —<br> -->
+					 You're doing great things in your business — <br></br> 
+					Consystnt helps you share your story with others.
 				</h1>
-				<p class="text-xl md:text-2xl mb-12 opacity-90 max-w-4xl mx-auto">
-					Ai-powered smart prompts and momentum tracking turn your story into lasting growth on social media — without the overthinking.
+				<p class="header-subhead">
+					AI-powered accountability and coaching turns your brand's story into lasting growth on social media — without the overthinking.
 				</p>
-				<button class="bg-white text-gray-900 px-12 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors">
+				<button class="get-started-button">
 					Get Started
 				</button>
 			</div>
@@ -90,7 +56,9 @@
 						<p class="text-xl text-gray-600 leading-relaxed">
 							Consystnt takes the guesswork out of being seen by the right people with sustom prompts that guide what to post, when to post, and how to connect with your audience — less thinking, more connecting.
 						</p>
-
+						<p class="text-xl text-gray-600 leading-relaxed">
+						The truth is your voice is the missing piece of your marketing
+					</p>
 						<ul class="bullets">
 							<li><strong>Know exactly what to post</strong> - tailored prompts designed for your brand and audience.</li>
 							<li><strong>Stay on schedule</strong> - reminders and timing cues so your posts land when they’ll have impact.</li>
@@ -109,7 +77,14 @@
 		</section>
 
 		<!-- Business Stories Section -->
-		<ScrollLockedBusinessStories />
+		<section class="bg-black h-screen overflow-hidden flex items-center">
+			<div class="max-w-7xl mx-auto px-6">
+				<h2 class="text-4xl font-bold text-white text-center mb-8">
+					You already know your stuff. Now it's time to get consistent.
+				</h2>
+				<BusinessStoryCard />
+			</div>
+		</section>
 
 		<!-- Streaks Section (Disabled) -->
 		<!-- 
@@ -173,6 +148,9 @@
 		<section class="bg-gray-900 py-20">
 			<div class="max-w-6xl mx-auto px-6 text-white">
 				<div class="text-center mb-16">
+					<p class="text-xl opacity-80 max-w-4xl mx-auto">
+						How it works.
+					</p>
 					<h2 class="text-4xl md:text-6xl font-bold mb-6">
 						AI that supports, not replaces.
 					</h2>
@@ -182,7 +160,7 @@
 				</div>
 				
 				<!-- Mirror → Blueprint → Action Cards flow -->
-				<div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+				<div class="flex flex-col  items-center justify-center gap-8 md:gap-16">
 					<div class="text-center group">
 						<div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
 							<div class="text-4xl">🪞</div>
@@ -284,14 +262,14 @@ Take the first step now. The rest unlock when you’re ready.
 
 <script>
 import GradientControl from '@/components/GradientControl.vue'
-import ScrollLockedBusinessStories from '@/components/human/ScrollLockedBusinessStories.vue'
+import BusinessStoryCard from '@/components/human/BusinessStoryCard.vue'
 import SpotlightCarousel from '@/components/human/SpotlightCarousel.vue'
 
 export default {
 	name: 'Human',
 	components: {
 		GradientControl,
-		ScrollLockedBusinessStories,
+		BusinessStoryCard,
 		SpotlightCarousel
 	},
 	data() {
@@ -315,6 +293,35 @@ export default {
 </script>
 
 <style scoped>
+
+
+.header-holder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.header-subhead {
+	font-size: 20px;
+}
+
+.main-header {
+	font-size: 38px;
+	line-height: 1.1;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+}
+
+.get-started-button {
+	color: black;
+	padding: 10px 30px;
+	background-color: white;
+	border-radius: 24px;
+	max-width: 150px;
+	font-weight: 600;
+}
+
 .center {
 	top: 50%;
 	left: 50%;
@@ -325,4 +332,5 @@ export default {
 	color: black;
 	font-size: 15px;
 }
+
 </style>
